@@ -20,7 +20,5 @@ public class App
     {
     	Performer p = (Performer) ctx.getBean("duke");
     	p.perform();
-        System.out.println( "Hello World!" );
-        
     }
 }

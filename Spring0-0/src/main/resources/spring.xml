@@ -4,5 +4,9 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	<!-- Bean declarations go here -->
-	<bean id="duke" class="org.chen.beans.Juggler"/>
+	<bean id="duke" class="org.chen.beans.PoeticJuggler">
+		<constructor-arg name="beanBags" value="15"></constructor-arg>
+		<constructor-arg name="p" ref="sonnet29"></constructor-arg>
+	</bean>
+	<bean id="sonnet29" class="org.chen.beans.Sonnet29" />
 </beans>
