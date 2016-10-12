@@ -8,5 +8,20 @@
 		<constructor-arg name="beanBags" value="15"></constructor-arg>
 		<constructor-arg name="p" ref="sonnet29"></constructor-arg>
 	</bean>
+	<!-- -->
 	<bean id="sonnet29" class="org.chen.beans.Sonnet29" />
+	<!-- 场地单例，延迟加载 -->
+	<bean id="stage" class="org.chen.beans.Stage" factory-method="getInstance">
+	</bean>
+	<!-- 灯光 -->
+	<bean id="auditorium" class="org.chen.beans.Auditorium"
+		init-method="turnOnlights" destroy-method="turnOfflights">
+	</bean>
+	<!-- -->
+	<bean id="kenny" class="org.chen.beans.Instrumentalist">
+		<property name="song" value="Jingle Bells"></property>
+		<property name="instrument" ref="saxophone"></property>
+	</bean>
+	<!-- 乐器，啥克斯 -->
+	<bean id="saxophone" class="org.chen.beans.Saxophone" />
 </beans>

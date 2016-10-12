@@ -18,7 +18,7 @@ public class App
 	
     public static void main( String[] args ) throws Exception
     {
-    	Performer p = (Performer) ctx.getBean("duke");
+    	Performer p = (Performer) ctx.getBean("kenny");
     	p.perform();
     }
 }
