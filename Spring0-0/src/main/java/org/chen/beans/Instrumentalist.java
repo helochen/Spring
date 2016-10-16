@@ -9,6 +9,7 @@ public class Instrumentalist implements Performer {
 
 	}
 
+	
 	private Instrument instrument;
 
 	public void setInstrument(Instrument instrument) {

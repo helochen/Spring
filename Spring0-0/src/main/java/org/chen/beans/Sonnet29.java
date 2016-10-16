@@ -1,7 +1,9 @@
 package org.chen.beans;
 
 import org.chen.Interface.Poem;
+import org.springframework.stereotype.Component;
 
+@Component("sonnet29")
 public class Sonnet29 implements Poem {
 	
 	public Sonnet29() {

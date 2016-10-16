@@ -13,12 +13,12 @@ public class App
 {
 	private static ApplicationContext ctx = null;
 	static{
-		ctx = new ClassPathXmlApplicationContext("spring.xml");
+		ctx = new ClassPathXmlApplicationContext("spring-auto.xml");
 	}
 	
     public static void main( String[] args ) throws Exception
     {
-    	Performer p = (Performer) ctx.getBean("kenny");
+    	Performer p = (Performer) ctx.getBean("duke");
     	p.perform();
     }
 }
