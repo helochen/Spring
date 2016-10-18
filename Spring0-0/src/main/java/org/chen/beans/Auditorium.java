@@ -8,4 +8,8 @@ public class Auditorium {
 	public void turnOfflights() {
 
 	}
+	
+	public Auditorium(){
+		
+	}
 }

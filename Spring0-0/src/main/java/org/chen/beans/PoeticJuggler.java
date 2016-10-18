@@ -1,15 +1,9 @@
 package org.chen.beans;
 
 import org.chen.Interface.Poem;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
 
-@Component("duke")
 public class PoeticJuggler extends Juggler {
 
-	@Autowired
-	@Qualifier(value="sonnet29")
 	private Poem poem;
 
 	public PoeticJuggler() {

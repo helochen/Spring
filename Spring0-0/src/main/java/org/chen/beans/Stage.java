@@ -2,7 +2,7 @@ package org.chen.beans;
 
 public class Stage {
 
-	private Stage() {
+	public Stage() {
 
 	}
 
