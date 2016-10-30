@@ -11,6 +11,6 @@ public class baseController {
 	@RequestMapping("{page}")
 	public String getPage(@PathVariable String page) {
 		System.out.println(page);
-		return "views/" + page;
+		return page;
 	}
 }
