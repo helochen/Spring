@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
 	http://www.springframework.org/schema/aop
     http://www.springframework.org/schema/aop/spring-aop.xsd">
-    
+
 	<!-- Bean declarations go here -->
 	<bean id="duke" class="org.chen.beans.PoeticJuggler">
 		<constructor-arg name="beanBags" value="15"></constructor-arg>
@@ -32,15 +31,15 @@
 	<bean id="audience" class="org.chen.beans.Audience" />
 	<aop:config>
 		<aop:aspect ref="audience">
-			<aop:before pointcut="execution(* org.chen.Interface.Performer.perform(..))"
-				method="takeSeats" />
-			<aop:before pointcut="execution(* org.chen.Interface.Performer.perform(..))"
-				method="turnOffCellPhones" />
-			<aop:after-returning
-				pointcut="execution(* org.chen.Interface.Performer.perform(..))"
+			<aop:pointcut
+				expression="execution(* org.chen.Interface.Performer.perform(..) )"
+				id="perform" />
+			<aop:before pointcut-ref="perform" method="takeSeats" />
+			<aop:before pointcut-ref="perform" method="turnOffCellPhones" />
+			<aop:after-returning pointcut-ref="perform"
 				method="applaud" />
 			<aop:after-throwing method="demandRefund"
-				pointcut="execution(* org.chen.Interface.Performer.perform(..))" />
+				pointcut-ref="perform" />
 		</aop:aspect>
 	</aop:config>
 </beans>
