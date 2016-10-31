@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("home")
 public class baseController {
 
-	@RequestMapping("{page}")
-	public String getPage(@PathVariable String page) {
-		return page;
-	}
+    @RequestMapping("{page}")
+    public String getPage(@PathVariable String page) {
+        return page;
+    }
 }
+
