@@ -68,7 +68,11 @@
 			<artifactId>spring-webflow</artifactId>
 			<version>2.4.4.RELEASE</version>
 		</dependency>
-
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.14</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>spring-flow</finalName>
@@ -78,10 +82,10 @@
 				<artifactId>jetty-maven-plugin</artifactId>
 				<version>9.2.8.v20150217</version>
 				<configuration>
-					<init-param>
+					<!--<init-param>
 						<param-name>useFileMappedBuffer</param-name>
 						<param-value>false</param-value>
-					</init-param>
+					</init-param>-->
 				</configuration>
 			</plugin>
 		</plugins>
