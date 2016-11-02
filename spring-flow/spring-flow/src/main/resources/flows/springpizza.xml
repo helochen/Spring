@@ -7,7 +7,7 @@
 	>
 
 	<var name="order" class="org.chen.flow.beans.Order"/>
-	
+
 	<subflow-state id="identifyCustomer" subflow="pizza/customer">
 	    <output name="customer" value="order.customer"/>
 	    <transition on="customerReady" to="buildOrder"></transition>
@@ -28,7 +28,8 @@
 		<transition to="thankCustomer"/>
 	</action-state>
 
-	<view-state id="thankCustomer" view="/pizza/index.jsp">
+	<view-state id="thankCustomer"
+				view="/spring/pizza/thankCustomer.jsp">
 		<transition to="endState"/>
 	</view-state>
 
