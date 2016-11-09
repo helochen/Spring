@@ -6,8 +6,15 @@
     >
 
     <view-state id="viewCart" view="flows/shopping/viewCart">
-        <transition on="submit" to="viewOrder"/>
+        <transition on="submit" to="handleProduct">
+            <evaluate expression="s_product.addProduct('product-test')"/>
+        </transition>
     </view-state>
+
+    <action-state id="handleProduct">
+        <evaluate expression="s_product.getNumbers()"/>
+        <transition to="viewOrder"/>
+    </action-state>
 
     <view-state id="viewOrder" view="flows/shopping/orderConfirmed">
         <transition on="returnToIndex" to="returnToIndex"/>
