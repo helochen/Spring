@@ -6,9 +6,10 @@
     >
 
     <view-state id="viewCart" view="flows/shopping/viewCart">
-        <transition on="submit" to="handleProduct">
-            <evaluate expression="s_product.addProduct('product-test')"/>
-        </transition>
+        <on-render>
+            <evaluate expression="s_product.getProducts()" result="viewScope.products"/>
+        </on-render>
+        <transition on="submit" to="handleProduct"/>
     </view-state>
 
     <action-state id="handleProduct">

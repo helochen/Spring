@@ -32,4 +32,14 @@ public class Product implements Serializable {
     }
 
     private String name;
+
+    private int price;
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
 }
